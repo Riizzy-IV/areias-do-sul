@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Areias do Sul — Residencial Beira Mar | Ilhéus, Bahia</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/sections.css" />
+</head>
+<body>
+
+  <!-- =========================================================
+       SEÇÃO 1 — NAVBAR + HERO
+  ========================================================== -->
+  <section class="hero" id="inicio">
+
+    <!-- Fundo (vídeo) -->
+    <div class="hero__bg">
+      <video
+        class="hero__video"
+        src="assets/video-hero.mp4"
+        poster="assets/images/hero-bg.jpg"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+        aria-hidden="true"
+      ></video>
+      <div class="hero__overlay"></div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="navbar" id="navbar">
+      <div class="navbar__container">
+
+        <nav class="navbar__nav" aria-label="Menu principal">
+          <a href="#sobre"       class="navbar__link">Sobre</a>
+          <span class="navbar__dot" aria-hidden="true"></span>
+          <a href="#galeria"     class="navbar__link">Galeria de imagens</a>
+          <span class="navbar__dot" aria-hidden="true"></span>
+          <a href="#plantas"     class="navbar__link">Plantas</a>
+          <span class="navbar__dot" aria-hidden="true"></span>
+          <a href="#lazer"       class="navbar__link">Lazer</a>
+          <span class="navbar__dot" aria-hidden="true"></span>
+          <a href="#localizacao" class="navbar__link">Localização</a>
+        </nav>
+
+        <a href="#contato" class="btn btn--nav">Entre em contato</a>
+
+        <button class="navbar__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+
+      <!-- Menu mobile -->
+      <div class="navbar__mobile" id="mobileMenu" aria-hidden="true">
+        <a href="#sobre"       class="navbar__mobile-link">Sobre</a>
+        <a href="#galeria"     class="navbar__mobile-link">Galeria de imagens</a>
+        <a href="#plantas"     class="navbar__mobile-link">Plantas</a>
+        <a href="#lazer"       class="navbar__mobile-link">Lazer</a>
+        <a href="#localizacao" class="navbar__mobile-link">Localização</a>
+        <a href="#contato"     class="btn btn--nav navbar__mobile-cta">Entre em contato</a>
+      </div>
+    </header>
+
+    <!-- Hero body: logo (esq) + título (centro) na mesma linha -->
+    <div class="hero__content">
+      <div class="hero__body">
+
+        <a href="#inicio" class="hero__logo" aria-label="Areias do Sul">
+          <img src="assets/images/logo.svg" alt="Residencial Areias do Sul" />
+        </a>
+
+        <div class="hero__text">
+          <p class="hero__launch">LANÇAMENTO &mdash; ILHÉUS &mdash; BAHIA</p>
+          <h1 class="hero__title">
+            <span>Um refúgio exclusivo</span>
+            <span>no litoral da Bahia</span>
+          </h1>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Barra de stats -->
+    <div class="hero__stats-wrap">
+      <div class="hero__stats-line"></div>
+      <div class="hero__stats">
+        <span class="hero__stat">85,74m² a 164,08m²</span>
+        <span class="hero__sep" aria-hidden="true">/</span>
+        <span class="hero__stat">2 a 4 suítes</span>
+        <span class="hero__sep" aria-hidden="true">/</span>
+        <span class="hero__stat">Piscina climatizada</span>
+        <span class="hero__sep" aria-hidden="true">/</span>
+        <span class="hero__stat">1 vaga de garagem</span>
+      </div>
+      <div class="hero__scroll-btn" aria-label="Rolar para baixo">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="18" cy="18" r="18" fill="#4a617a"/>
+          <path d="M11 16L18 23L25 16" stroke="#f2ddc6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+
+  </section>
+  <!-- FIM SEÇÃO 1 -->
+
+
+  <!-- =========================================================
+       SEÇÃO 2 — SOBRE
+  ========================================================== -->
+  <section class="sobre" id="sobre">
+
+    <!-- Fundo textura -->
+    <div class="sobre__texture" aria-hidden="true"></div>
+
+    <!-- Parte 1: Label + Título (esq) / Parágrafo (dir) -->
+    <div class="sobre__intro">
+      <div class="sobre__container">
+
+        <div class="sobre__col-left">
+          <div class="section-label">
+            <span class="section-label__project">RESIDENCIAL AREIAS DO SUL</span>
+            <img src="assets/images/icon-label.svg" alt="" aria-hidden="true" class="section-label__icon" />
+            <span class="section-label__tag">SOBRE</span>
+          </div>
+          <h2 class="sobre__heading">
+            O Areias do Sul é um convite para<br>
+            viver o essencial com elegância...
+          </h2>
+        </div>
+
+        <div class="sobre__col-right">
+          <p class="sobre__desc">
+            Há lugares que impressionam.<br>
+            E existem lugares que transformam a forma como vivemos o tempo.
+          </p>
+          <p class="sobre__desc">
+            Entre o azul do mar, a brisa do litoral baiano e a tranquilidade de um condomínio beira mar, nasce o Residencial Areias do Sul.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Parte 2: Foto full-width da fachada com quote sobreposta -->
+    <div class="sobre__photo-wrap">
+      <img
+        src="assets/images/fachada.jpg"
+        alt="Fachada do Residencial Areias do Sul"
+        class="sobre__photo"
+        loading="lazy"
+      />
+      <div class="sobre__quote-overlay">
+        <p class="sobre__quote">
+          ...Porque o verdadeiro luxo está<br>nos momentos que permanecem
+        </p>
+      </div>
+    </div>
+
+    <!-- Parte 3: Dois parágrafos abaixo da foto -->
+    <div class="sobre__body">
+      <div class="sobre__container">
+
+        <div class="sobre__body-left">
+          <p>Um refúgio criado para quem valoriza o privilégio das experiências verdadeiras: os encontros sem pressa, os finais de tarde dourados, os momentos em família e a conexão genuína com a natureza.</p>
+        </div>
+
+        <div class="sobre__body-right">
+          <p>Aqui, a sofisticação acontece de forma natural.</p>
+          <p>Na leveza da arquitetura integrada ao cenário.</p>
+          <p>Na exclusividade de viver cercado pelo <span class="sobre__accent">mar, pelo verde e pela privacidade.</span></p>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+  <!-- FIM SEÇÃO 2 -->
+
+
+  <!-- =========================================================
+       SEÇÃO 3 — GALERIA DE IMAGENS
+  ========================================================== -->
+  <section class="galeria" id="galeria">
+    <div class="galeria__container">
+
+      <!-- Linha 1 esq: label + heading -->
+      <div class="galeria__intro">
+        <div class="section-label">
+          <span class="section-label__project">RESIDENCIAL AREIAS DO SUL</span>
+          <img src="assets/images/icon-label.svg" alt="" aria-hidden="true" class="section-label__icon" />
+          <span class="section-label__tag">GALERIA DE IMAGENS</span>
+        </div>
+        <h2 class="galeria__heading">
+          Seu refúgio particular<br>beira mar
+        </h2>
+      </div>
+
+      <!-- Linha 1 dir: filtros -->
+      <div class="galeria__filters">
+        <span class="galeria__filter-label">Imagens disponível :</span>
+        <button class="galeria__filter-btn active" data-filter="apartamentos">Apartamentos</button>
+        <button class="galeria__filter-btn" data-filter="areas-comuns">Áreas comuns</button>
+      </div>
+
+      <!-- Linha 2 esq: foto drone -->
+      <div class="galeria__drone-wrap">
+        <img
+          src="assets/images/galeria/drone.jpg"
+          alt="Vista aérea do Residencial Areias do Sul"
+          class="galeria__drone"
+          loading="lazy"
+        />
+        <div class="galeria__drone-caption">FACHADA AREIAS DO SUL</div>
+      </div>
+
+      <!-- Linha 2 dir: carrossel -->
+      <div class="galeria__right">
+
+        <div class="galeria__slider-wrap">
+          <div class="galeria__slider" id="galeriaSlider">
+          <div class="galeria__track" id="galeriaTrack">
+
+            <div class="galeria__slide">
+              <img src="assets/images/galeria/g01.jpg" alt="Varanda Cobertura" loading="lazy" />
+              <div class="galeria__slide-caption">VARANDA COBERTURA - 01/05</div>
+              <button class="galeria__expand" aria-label="Ampliar imagem">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 2H14V6M6 14H2V10M14 2L9 7M2 14L7 9" stroke="#011f3b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+
+            <div class="galeria__slide">
+              <img src="assets/images/galeria/g02.jpg" alt="Suíte Térreo e Tipo" loading="lazy" />
+              <div class="galeria__slide-caption">SUÍTE TÉRREO E TIPO - 02/05</div>
+              <button class="galeria__expand" aria-label="Ampliar imagem">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 2H14V6M6 14H2V10M14 2L9 7M2 14L7 9" stroke="#011f3b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+
+            <div class="galeria__slide">
+              <img src="assets/images/galeria/g03.jpg" alt="Cozinha Cobertura" loading="lazy" />
+              <div class="galeria__slide-caption">COZINHA COBERTURA - 03/05</div>
+              <button class="galeria__expand" aria-label="Ampliar imagem">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 2H14V6M6 14H2V10M14 2L9 7M2 14L7 9" stroke="#011f3b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+
+            <div class="galeria__slide">
+              <img src="assets/images/galeria/g04.jpg" alt="Cozinha Cobertura" loading="lazy" />
+              <div class="galeria__slide-caption">COZINHA COBERTURA - 04/05</div>
+              <button class="galeria__expand" aria-label="Ampliar imagem">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 2H14V6M6 14H2V10M14 2L9 7M2 14L7 9" stroke="#011f3b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+
+            <div class="galeria__slide">
+              <img src="assets/images/galeria/g05.jpg" alt="Cozinha Cobertura" loading="lazy" />
+              <div class="galeria__slide-caption">COZINHA COBERTURA - 05/05</div>
+              <button class="galeria__expand" aria-label="Ampliar imagem">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 2H14V6M6 14H2V10M14 2L9 7M2 14L7 9" stroke="#011f3b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+
+          </div><!-- /.galeria__track -->
+          </div><!-- /.galeria__slider -->
+
+          <!-- Navegação prev/next -->
+          <div class="galeria__nav">
+            <button class="galeria__nav-btn" id="galeriaPrev" aria-label="Imagem anterior">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 13L10 7L16 13" stroke="#f2ddc6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <button class="galeria__nav-btn" id="galeriaNext" aria-label="Próxima imagem">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 7L10 13L16 7" stroke="#f2ddc6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+
+        </div><!-- /.galeria__slider-wrap -->
+      </div><!-- /.galeria__right -->
+
+    </div><!-- /.galeria__container -->
+
+    <!-- Lightbox -->
+    <div class="galeria__lightbox" id="galeriaLightbox" aria-hidden="true">
+      <button class="galeria__lightbox-close" id="galeriaLightboxClose" aria-label="Fechar">&times;</button>
+      <img src="" alt="" class="galeria__lightbox-img" id="galeriaLightboxImg" />
+    </div>
+
+  </section>
+  <!-- FIM SEÇÃO 3 -->
+
+
+  <!-- =========================================================
+       SEÇÃO 4 — PLANTAS
+  ========================================================== -->
+  <section class="plantas" id="plantas">
+
+    <!-- Cabeçalho: label + botões de tipo -->
+    <div class="plantas__header">
+      <div class="plantas__intro">
+        <div class="section-label">
+          <span class="section-label__project">RESIDENCIAL AREIAS DO SUL</span>
+          <img src="assets/images/icon-label.svg" alt="" aria-hidden="true" class="section-label__icon" />
+          <span class="section-label__tag">PLANTAS</span>
+        </div>
+        <h2 class="plantas__heading">
+          Seu refúgio particular<br>pé na areia
+        </h2>
+      </div>
+
+      <div class="plantas__tipos-wrap">
+        <button class="plantas__tipo-btn active" data-tipo="garden">Garden</button>
+        <button class="plantas__tipo-btn" data-tipo="tipo">Tipo</button>
+        <button class="plantas__tipo-btn" data-tipo="cobertura">Cobertura</button>
+      </div>
+    </div>
+
+    <!-- Seletores de metragem (renderizado via JS) -->
+    <div class="plantas__sizes-wrap">
+      <div class="plantas__sizes"></div>
+    </div>
+
+    <!-- Exibição da planta -->
+    <div class="plantas__display">
+      <div class="plantas__display-inner">
+
+      <div class="plantas__info-card">
+        <p class="plantas__info-label">Planta humanizada da</p>
+        <div class="plantas__info-divider"></div>
+        <div class="plantas__info-area">
+          <span class="plantas__tipo-label" id="plantaTipoLabel">Térreo</span>
+          <span class="plantas__area-num" id="plantaAreaNum">142,39m²</span>
+        </div>
+        <p class="plantas__info-suites" id="plantaSuites">3 Suítes e 1 Vaga</p>
+      </div>
+
+      <div class="plantas__plan-wrap">
+        <img
+          src="assets/images/plantas/planta-garden-01.png"
+          alt="Planta do apartamento"
+          class="plantas__plan-img"
+          id="plantaImg"
+          loading="lazy"
+        />
+      </div>
+
+      </div><!-- /.plantas__display-inner -->
+    </div>
+
+  </section>
+  <!-- FIM SEÇÃO 4 -->
+
+
+  <!-- =========================================================
+       SEÇÃO 5 — IMPLANTAÇÃO
+  ========================================================== -->
+  <section class="implantacao" id="implantacao">
+    <div class="implantacao__container">
+
+      <!-- Cabeçalho -->
+      <div class="implantacao__header">
+        <div class="section-label">
+          <span class="section-label__project">RESIDENCIAL AREIAS DO SUL</span>
+          <img src="assets/images/icon-label.svg" alt="" aria-hidden="true" class="section-label__icon" />
+          <span class="section-label__tag">GALERIA DE IMAGENS</span>
+        </div>
+        <h2 class="implantacao__heading">
+          Viva momentos agradáveis<br>ao lado de quem você mais ama
+        </h2>
+      </div>
+
+      <!-- Imagem -->
+      <div class="implantacao__img-wrap">
+        <img
+          src="assets/images/IMPLANTACAO.png"
+          alt="Planta de implantação"
+          class="implantacao__img"
+          loading="lazy"
+        />
+      </div>
+
+      <!-- Título + Legenda com fundo navy -->
+      <div class="implantacao__legenda-band">
+      <h3 class="implantacao__title">Implantação</h3>
+
+      <div class="implantacao__legenda">
+        <div class="implantacao__legenda-item">
+          <span class="implantacao__legenda-num">1</span>
+          <span>- Piscina climatizada</span>
+        </div>
+        <div class="implantacao__legenda-item">
+          <span class="implantacao__legenda-num">2</span>
+          <span>- Bar molhado</span>
+        </div>
+        <div class="implantacao__legenda-item">
+          <span class="implantacao__legenda-num">3</span>
+          <span>- Deck de madeira</span>
+        </div>
+        <div class="implantacao__legenda-item">
+          <span class="implantacao__legenda-num">4</span>
+          <span>- Sauna</span>
+        </div>
+        <div class="implantacao__legenda-item">
+          <span class="implantacao__legenda-num">5</span>
+          <span>- Pet place</span>
+        </div>
+        <div class="implantacao__legenda-item">
+          <span class="implantacao__legenda-num">6</span>
+          <span>- Academia</span>
+        </div>
+        <div class="implantacao__legenda-item">
+          <span class="implantacao__legenda-num">7</span>
+          <span>- Minimarket</span>
+        </div>
+      </div>
+      </div><!-- /.implantacao__legenda-band -->
+
+    </div>
+  </section>
+  <!-- FIM SEÇÃO 5 —IMPLANTAÇÃO -->
+
+
+  <!-- =========================================================
+       SEÇÃO 6 — CTA STRIP
+  ========================================================== -->
+  <div class="cta-strip">
+    <div class="cta-strip__container">
+      <div class="cta-strip__card">
+        <p class="cta-strip__text"><strong>Quer saber mais?</strong> Nossos corretores estão prontos para te atender.</p>
+        <a href="#contato" class="btn cta-strip__btn">Entre em contato</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- =========================================================
+       SEÇÃO 7 — LOCALIZAÇÃO
+  ========================================================== -->
+  <section class="localizacao" id="localizacao">
+
+    <!-- Header: 2 colunas -->
+    <div class="localizacao__header">
+      <div class="localizacao__left">
+        <div class="section-label">
+          <span class="section-label__project">RESIDENCIAL AREIAS DO SUL</span>
+          <img src="assets/images/icon-label.svg" alt="" aria-hidden="true" class="section-label__icon" />
+          <span class="section-label__tag">LOCALIZAÇÃO</span>
+        </div>
+        <h2 class="localizacao__heading">
+          Av. Tancredo Neves, s/n, Cond. Mar de Ilhéus,<br>Quadra 16, Lote – 123
+        </h2>
+      </div>
+      <div class="localizacao__right">
+        <p class="localizacao__desc">No litoral sul de Ilhéus, o Areias do Sul oferece o privilégio de viver entre o mar, a natureza e a tranquilidade de um condomínio exclusivo.</p>
+      </div>
+    </div>
+
+    <!-- Mapa full-width -->
+    <div class="localizacao__map-wrap">
+      <iframe
+        class="localizacao__map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3786.0!2d-39.05!3d-14.82!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDQ5JzExLjIiUyAzOcKwMDMnMDAuMCJX!5e0!3m2!1spt-BR!2sbr!4v1"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Localização Residencial Areias do Sul"
+      ></iframe>
+
+      <!-- Botões sobrepostos -->
+      <div class="localizacao__map-btns">
+        <a
+          href="https://maps.google.com/?q=Av.+Tancredo+Neves,+Ilhéus,+Bahia"
+          target="_blank"
+          rel="noopener"
+          class="localizacao__map-btn"
+        >
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 1.5C5.51 1.5 3.5 3.51 3.5 6c0 3.75 4.5 8.5 4.5 8.5s4.5-4.75 4.5-8.5c0-2.49-2.01-4.5-4.5-4.5zm0 6.1a1.6 1.6 0 110-3.2 1.6 1.6 0 010 3.2z" fill="currentColor"/>
+          </svg>
+          Abrir com Maps
+        </a>
+        <a
+          href="https://waze.com/ul?q=Av.+Tancredo+Neves+Ilhéus+Bahia"
+          target="_blank"
+          rel="noopener"
+          class="localizacao__map-btn localizacao__map-btn--waze"
+        >
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="9" cy="9" r="8" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M6 9.5c.8 1 2 1.5 3 1.5s2.2-.5 3-1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="6.5" cy="7" r="1" fill="currentColor"/>
+            <circle cx="11.5" cy="7" r="1" fill="currentColor"/>
+          </svg>
+          Abrir com Waze
+        </a>
+      </div>
+    </div>
+
+  </section>
+  <!-- FIM SEÇÃO 7 — LOCALIZAÇÃO -->
+
+
+  <!-- =========================================================
+       SEÇÃO 8 — FICHA TÉCNICA
+  ========================================================== -->
+  <section class="ficha" id="ficha">
+    <div class="container">
+
+      <!-- Cabeçalho -->
+      <div class="section-label">
+        <span class="section-label__project">RESIDENCIAL AREIAS DO SUL</span>
+        <img src="assets/images/icon-label.svg" alt="" aria-hidden="true" class="section-label__icon" />
+        <span class="section-label__tag">FICHA TÉCNICA</span>
+      </div>
+      <h2 class="ficha__heading">Conheça os detalhes</h2>
+
+      <!-- Especificações: 3 colunas -->
+      <div class="ficha__specs">
+        <div class="ficha__spec-col">
+          <div class="ficha__spec-item">
+            <div class="ficha__spec-label"><span class="ficha__bullet"></span>Área do terreno:</div>
+            <p class="ficha__spec-value">1.338,99m².</p>
+          </div>
+          <div class="ficha__spec-item">
+            <div class="ficha__spec-label"><span class="ficha__bullet"></span>Unidades Totais</div>
+            <p class="ficha__spec-value">24 unidades:<br>- Térreo: 6 unidades (Garden);<br>- 1º Pavimento: 6 unidades (Apartamentos);<br>- 2º/3º Pav: 12 unidades (Coberturas Duplex).</p>
+          </div>
+        </div>
+
+        <div class="ficha__spec-col">
+          <div class="ficha__spec-item">
+            <div class="ficha__spec-label"><span class="ficha__bullet"></span>Área do total</div>
+            <p class="ficha__spec-value">2.738,64m².</p>
+          </div>
+          <div class="ficha__spec-item">
+            <div class="ficha__spec-label"><span class="ficha__bullet"></span>Lazer</div>
+            <p class="ficha__spec-value">- Piscina climatizada;<br>- Bar molhado;<br>- Deck de madeira;<br>- Sauna*</p>
+          </div>
+        </div>
+
+        <div class="ficha__spec-col">
+          <div class="ficha__spec-item">
+            <div class="ficha__spec-label"><span class="ficha__bullet"></span>Pavimentos</div>
+            <p class="ficha__spec-value">4 pavimentos (Térreo + 3).</p>
+          </div>
+          <div class="ficha__spec-item">
+            <p class="ficha__spec-value">- Pet place;<br>- Minimarket;<br>- Academia.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Metragens dos apartamentos -->
+      <div class="ficha__metragens">
+        <h3 class="ficha__metragens-title">Metragens dos apartamentos</h3>
+        <div class="ficha__metragens-grid">
+          <div class="ficha__met-col">
+            <div class="ficha__met-header"><span class="ficha__bullet"></span>Térreo: 6 unidades (Garden)</div>
+            <ul class="ficha__met-list">
+              <li>Garden 01: 142,39m² - 3 Suítes e 1 Vaga</li>
+              <li>Garden 02: 107,52m² - 2 Suítes e 1 Vaga</li>
+              <li>Garden 03: 119,77m² - 3 Suítes e 1 Vaga</li>
+              <li>Garden 04: 119,71m² - 3 Suítes e 1 Vaga</li>
+              <li>Garden 05: 107,32m² - 2 Suítes e 1 Vaga</li>
+              <li>Garden 06: 143,25m² - 3 Suítes e 1 Vaga</li>
+            </ul>
+          </div>
+          <div class="ficha__met-col">
+            <div class="ficha__met-header"><span class="ficha__bullet"></span>1º Pavimento: 6 unidades</div>
+            <ul class="ficha__met-list">
+              <li>Apto 101: 106,48m² - 3 Suítes e 1 vaga</li>
+              <li>Apto 102: 85,74m² - 2 Suítes e 1 Vaga</li>
+              <li>Apto 103: 97,99m² - 3 Suítes e 1 Vaga</li>
+              <li>Apto 104: 97,99m² - 3 Suítes e 1 Vaga</li>
+              <li>Apto 105: 85,74m² - 2 Suítes e 1 Vaga</li>
+              <li>Apto 106: 106,48m² - 3 Suítes e 1 Vaga</li>
+            </ul>
+          </div>
+          <div class="ficha__met-col">
+            <div class="ficha__met-header"><span class="ficha__bullet"></span>Cobertura: 12 unidades</div>
+            <ul class="ficha__met-list">
+              <li>Cobertura 301: 164,08m² - 4 Suítes e 1 Vaga</li>
+              <li>Cobertura 302: 90,77m² - 2 Suítes e 1 Vaga</li>
+              <li>Cobertura 303: 91,71m² - 2 Suítes e 1 Vaga</li>
+              <li>Cobertura 304: 91,71m² - 2 Suítes e 1 Vaga</li>
+              <li>Cobertura 305: 90,77m² - 2 Suítes e 1 Vaga</li>
+              <li>Cobertura 306: 136,71m² - 3 Suítes e 1 Vaga</li>
+            </ul>
+          </div>
+          <div class="ficha__met-col">
+            <ul class="ficha__met-list ficha__met-list--no-header">
+              <li>Cobertura 307: 136,71m² - 3 Suítes e 1 Vaga</li>
+              <li>Cobertura 308: 90,77m² - 2 Suítes e 1 Vaga</li>
+              <li>Cobertura 309: 91,71m² - 2 Suítes e 1 Vaga</li>
+              <li>Cobertura 310: 91,77m² - 2 Suítes e 1 Vaga</li>
+              <li>Cobertura 311: 90,77m² - 2 Suítes e 1 Vaga</li>
+              <li>Cobertura 312: 134,80m² - 3 Suítes e 1 Vaga</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- FIM SEÇÃO 8 — FICHA TÉCNICA -->
+
+
+  <!-- =========================================================
+       SEÇÃO 9 — CONTATO
+  ========================================================== -->
+  <section class="contato" id="contato">
+    <div class="contato__inner">
+
+      <!-- Label centralizado -->
+      <div class="section-label section-label--center">
+        <span class="section-label__project">RESIDENCIAL AREIAS DO SUL</span>
+        <img src="assets/images/icon-label.svg" alt="" aria-hidden="true" class="section-label__icon" />
+        <span class="section-label__tag">CONTATO</span>
+      </div>
+
+      <!-- Heading -->
+      <h2 class="contato__heading">
+        Quer conhecer mais sobre o Areias do Sul?<br>
+        Fale com a nossa equipe
+      </h2>
+
+      <!-- Subtítulo -->
+      <p class="contato__desc">Cadastre-se para receber em primeira mão todos os detalhes do Residencial Areias do Sul.</p>
+
+      <!-- Formulário -->
+      <form class="contato__form" novalidate>
+        <div class="contato__field">
+          <label class="contato__label" for="c-nome">Nome completo</label>
+          <input id="c-nome" type="text" class="contato__input" placeholder="Insira seu nome completo" />
+        </div>
+        <div class="contato__field">
+          <label class="contato__label" for="c-email">E-mail</label>
+          <input id="c-email" type="email" class="contato__input" placeholder="e-mail@e-mail.com.br" />
+        </div>
+        <div class="contato__field">
+          <label class="contato__label" for="c-tel">Telefone</label>
+          <input id="c-tel" type="tel" class="contato__input" placeholder="(xx) 00000-0000" />
+        </div>
+        <button type="submit" class="contato__submit">Solicitar contato</button>
+        <label class="contato__check">
+          <input type="checkbox" class="contato__checkbox" checked />
+          <span>Ao informar meus dados eu concordo com os <a href="#" class="contato__check-link">termos de privacidade e cookies</a></span>
+        </label>
+      </form>
+
+    </div>
+  </section>
+  <!-- FIM SEÇÃO 9 — CONTATO -->
+
+
+  <!-- =========================================================
+       SEÇÃO 10 — SOBRE A CONSTRUTORA
+  ========================================================== -->
+  <section class="construtora">
+    <div class="construtora__inner">
+
+      <!-- Card central: logo + texto -->
+      <div class="construtora__card">
+        <img src="assets/images/logo hughes.svg" alt="Hughes Construtora" class="construtora__logo" />
+        <div class="construtora__text">
+          <p>Desde a nossa origem, expandimos nossa presença para outras regiões do país, inaugurando filiais no Distrito Federal e em São Paulo. Hoje, com orgulho, sempre levando sofisticação e expertise em cada projeto que realizamos.</p>
+          <p>Nosso portfólio conta com mais de 45 obras entregues, todas marcadas pelo requinte e pela atenção aos detalhes que nossos clientes de alto padrão exigem.</p>
+          <p>Com uma equipe dedicada de mais de 200 colaboradores, nossa missão é transformar sonhos em realidade, criando espaços únicos que refletem o estilo e a elegância de quem os habita.</p>
+        </div>
+      </div>
+
+      <img src="assets/images/construtora-foto.jpg" alt="Hughes Construtora" class="construtora__photo" />
+
+    </div>
+  </section>
+  <!-- FIM SEÇÃO 10 — SOBRE A CONSTRUTORA -->
+
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================== -->
+  <footer class="footer">
+    <div class="footer__top">
+      <img src="assets/images/logo.svg" alt="Residencial Areias do Sul" class="footer__logo" />
+    </div>
+
+    <div class="footer__mid container">
+      <div class="footer__location">
+        <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M10 0C4.477 0 0 4.477 0 10c0 7.5 10 14 10 14s10-6.5 10-14C20 4.477 15.523 0 10 0zm0 13.5a3.5 3.5 0 110-7 3.5 3.5 0 010 7z" fill="currentColor"/>
+        </svg>
+        <span>Areias do Sul</span>
+      </div>
+      <div class="footer__instagram">
+        <span>Acesse nosso instagram:</span>
+        <a href="https://instagram.com" target="_blank" rel="noopener" class="footer__ig-link" aria-label="Instagram Areias do Sul">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="1" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="11" cy="11" r="4" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="16" cy="6" r="1" fill="currentColor"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer__disclaimer container">
+      <p>Os equipamentos, mobiliários, revestimentos e apresentações constantes do presente material são meramente ilustrativos. Podendo sofrer revisão de modelos. Especificações e quantidades. As vegetações são de porte adulto, a ser atingido após a entrega do empreendimento, primando pelo direito à informação, durante a execução do contrato. O incorporador ira cientificar o cliente de eventual prazo de prorrogação para a entrega da unidade imobiliária, que não será superior a 180 (cento e oitenta) dias. Salvo em caso de fortuito externo ou motivo de força maior.</p>
+    </div>
+
+    <div class="footer__bottom container">
+      <span>Copyright © 2026 Areias do Sul &nbsp;|&nbsp; <a href="#" class="footer__privacy">Política de privacidade</a></span>
+      <span class="footer__credits">Feito com <span class="footer__heart">♥</span> por <a href="https://www.balzani.com.br" target="_blank" rel="noopener" class="footer__balzani-link"><img src="assets/images/logo balzani.svg" alt="Balzani" class="footer__balzani-logo" /></a></span>
+    </div>
+  </footer>
+  <!-- FIM FOOTER -->
+
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
