@@ -1105,11 +1105,30 @@
 }
 
 .implantacao__img-wrap {
+  position: relative;
   width: 100%;
   border-radius: 8px;
   overflow: hidden;
   margin-bottom: 2rem;
+  cursor: pointer;
 }
+
+.implantacao__expand {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  background: rgba(255,255,255,0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  transition: background var(--transition);
+}
+.implantacao__expand:hover { background: #fff; }
 
 .implantacao__img {
   width: 100%;

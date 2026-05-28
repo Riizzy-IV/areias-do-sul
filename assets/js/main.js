@@ -31,7 +31,11 @@ mobileMenu.querySelectorAll('a').forEach(link => {
   });
 });
 
-/* --- Galeria: filtros -------------------------------------- */
+/* --- Galeria: carrossel vertical --------------------------- */
+const galeriaTrack = document.getElementById('galeriaTrack');
+const prevBtn    = document.getElementById('galeriaPrev');
+const nextBtn    = document.getElementById('galeriaNext');
+let currentSlide = 0;
 let activeFilter = 'apartamentos';
 
 function getVisibleSlides() {
@@ -58,12 +62,6 @@ document.querySelectorAll('.galeria__filter-btn').forEach(btn => {
 });
 
 applyFilter(activeFilter);
-
-/* --- Galeria: carrossel vertical --------------------------- */
-const galeriaTrack = document.getElementById('galeriaTrack');
-const prevBtn    = document.getElementById('galeriaPrev');
-const nextBtn    = document.getElementById('galeriaNext');
-let currentSlide = 0;
 
 function getSlideStep() {
   const visible = getVisibleSlides();
@@ -111,6 +109,19 @@ lightbox && lightbox.addEventListener('click', e => {
     lightbox.classList.remove('open');
     lightbox.setAttribute('aria-hidden', 'true');
   }
+});
+
+/* --- Implantação: expandir imagem -------------------------- */
+const implantacaoExpand = document.getElementById('implantacaoExpand');
+const implantacaoWrap = implantacaoExpand?.closest('.implantacao__img-wrap');
+[implantacaoExpand, implantacaoWrap].forEach(el => {
+  if (!el) return;
+  el.addEventListener('click', () => {
+    lightboxImg.src = 'assets/images/IMPLANTACAO.png';
+    lightboxImg.alt = 'Planta de implantação';
+    lightbox.classList.add('open');
+    lightbox.setAttribute('aria-hidden', 'false');
+  });
 });
 
 /* --- Scroll suave para âncoras ----------------------------- */
