@@ -74,7 +74,8 @@ function getSlideStep() {
 function moveGaleria(index) {
   if (!galeriaTrack) return;
   const visible = getVisibleSlides();
-  currentSlide = Math.max(0, Math.min(index, visible.length - 1));
+  const total = visible.length;
+  currentSlide = ((index % total) + total) % total;
   const offset = getSlideStep() * currentSlide;
   galeriaTrack.style.transform = `translateY(-${offset}px)`;
 }
