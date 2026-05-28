@@ -1237,7 +1237,7 @@
 
 .implantacao__expand {
   position: absolute;
-  top: 1rem;
+  bottom: 1rem;
   right: 1rem;
   width: 40px;
   height: 40px;
@@ -1316,6 +1316,7 @@
 }
 
 @media (max-width: 768px) {
+  .implantacao__expand { display: none; }
   .implantacao__legenda-band {
     margin-top: clamp(-6rem, -10vw, -8rem);
     padding-top: clamp(6rem, 12vw, 10rem);
