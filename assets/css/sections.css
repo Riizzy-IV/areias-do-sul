@@ -303,6 +303,7 @@
 
 @media (max-width: 768px) {
   .hero { min-height: 750px; height: 750px; }
+  .hero__video { object-position: 60% top; }
 
   /* Logo hero: escondido no mobile (logo está na navbar) */
   .hero__logo { display: none; }
