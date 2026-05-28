@@ -302,6 +302,7 @@
 }
 
 @media (max-width: 768px) {
+  .navbar.scrolled { position: absolute; background: transparent; backdrop-filter: none; box-shadow: none; }
   .hero { min-height: 750px; height: 750px; }
   .hero__video { object-position: 60% top; }
 

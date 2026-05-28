@@ -141,12 +141,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const plantasDB = {
   garden: {
     label: 'Térreo',
-    hasFloors: true,
     sizes: [
-      { id: '143',  area: '143,25m²', suites: '3 Suítes e 1 Vaga', floors: ['garden/143,25.avif',  'garden/garden-01-06.avif'] },
-      { id: '142',  area: '142,39m²', suites: '3 Suítes e 1 Vaga', floors: ['garden/142,39.avif',  'garden/garden-02-05.avif'] },
-      { id: '107a', area: '107,52m²', suites: '2 Suítes e 1 Vaga', floors: ['garden/107,52.avif',  'garden/garden-03-04.avif'] },
-      { id: '107b', area: '107,32m²', suites: '2 Suítes e 1 Vaga', floors: ['garden/107,32.avif',  'garden/garden-03-04.avif'] },
+      { id: '143',  area: '143,25m²', suites: '3 Suítes e 1 Vaga', img: 'garden/143,25.avif' },
+      { id: '142',  area: '142,39m²', suites: '3 Suítes e 1 Vaga', img: 'garden/142,39.avif' },
+      { id: '107a', area: '107,52m²', suites: '2 Suítes e 1 Vaga', img: 'garden/107,52.avif' },
+      { id: '107b', area: '107,32m²', suites: '2 Suítes e 1 Vaga', img: 'garden/107,32.avif' },
     ],
   },
   tipo: {
