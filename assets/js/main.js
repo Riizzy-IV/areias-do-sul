@@ -140,40 +140,45 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const plantasDB = {
   garden: {
     label: 'Térreo',
+    hasFloors: true,
     sizes: [
-      { id: '143',  area: '143,25m²', suites: '3 Suítes e 1 Vaga', img: 'garden/143,25.png' },
-      { id: '142',  area: '142,39m²', suites: '3 Suítes e 1 Vaga', img: 'garden/142,39.png' },
-      { id: '107a', area: '107,52m²', suites: '2 Suítes e 1 Vaga', img: 'garden/107,52.png' },
-      { id: '107b', area: '107,32m²', suites: '2 Suítes e 1 Vaga', img: 'garden/107,32.png' },
+      { id: '143',  area: '143,25m²', suites: '3 Suítes e 1 Vaga', floors: ['garden/143,25.png',  'garden/garden-01-06.jpg'] },
+      { id: '142',  area: '142,39m²', suites: '3 Suítes e 1 Vaga', floors: ['garden/142,39.png',  'garden/garden-02-05.jpg'] },
+      { id: '107a', area: '107,52m²', suites: '2 Suítes e 1 Vaga', floors: ['garden/107,52.png',  'garden/garden-03-04.jpg'] },
+      { id: '107b', area: '107,32m²', suites: '2 Suítes e 1 Vaga', floors: ['garden/107,32.png',  'garden/garden-03-04.jpg'] },
     ],
   },
   tipo: {
     label: '1º Pavimento',
     sizes: [
-      { id: '106', area: '106,48m²', suites: '3 Suítes e 1 Vaga', img: 'planta-tipo-01.png' },
-      { id: '97',  area: '97,99m²',  suites: '3 Suítes e 1 Vaga', img: 'planta-tipo-02.png' },
-      { id: '85',  area: '85,74m²',  suites: '2 Suítes e 1 Vaga', img: 'planta-tipo-03.png' },
+      { id: '106', area: '106,48m²', suites: '3 Suítes e 1 Vaga', img: 'tipo/106,48.png' },
+      { id: '97',  area: '97,99m²',  suites: '3 Suítes e 1 Vaga', img: 'tipo/97,99.png' },
+      { id: '85',  area: '85,74m²',  suites: '2 Suítes e 1 Vaga', img: 'tipo/85,74.png' },
     ],
   },
   cobertura: {
-    label: '2º/3º Pavimento',
+    label: '1º Andar',
+    hasFloors: true,
+    floorLabels: ['1º Andar', '2º Andar'],
     sizes: [
-      { id: '164', area: '164,08m²', suites: '4 Suítes e 1 Vaga', img: 'planta-cobertura-01.png' },
-      { id: '136', area: '136,71m²', suites: '3 Suítes e 1 Vaga', img: 'planta-cobertura-02.png' },
-      { id: '91',  area: '91,71m²',  suites: '2 Suítes e 1 Vaga', img: 'planta-cobertura-03.png' },
-      { id: '90',  area: '90,77m²',  suites: '2 Suítes e 1 Vaga', img: 'planta-cobertura-04.png' },
+      { id: '134', area: '134,80m²', suites: '3 Suítes e 1 Vaga', floors: ['cobertura/134,80.png',  'cobertura/134,80 2 andar.png'] },
+      { id: '136', area: '136,71m²', suites: '3 Suítes e 1 Vaga', floors: ['cobertura/136,71.png',  'cobertura/136,71 2 andar.png'] },
+      { id: '91',  area: '91,71m²',  suites: '2 Suítes e 1 Vaga', floors: ['cobertura/91,71.png',   'cobertura/91,71 2 andar.png'] },
+      { id: '90',  area: '90,77m²',  suites: '2 Suítes e 1 Vaga', floors: ['cobertura/90,77.png',   'cobertura/90,77 2 andar.png'] },
     ],
   },
 };
 
 let activeTipo = 'garden';
-let activeSizeId = '142';
+let activeSizeId = '143';
+let activeFloor = 0;
 
 const plantaImg       = document.getElementById('plantaImg');
 const plantaAreaNum   = document.getElementById('plantaAreaNum');
 const plantaTipoLabel = document.getElementById('plantaTipoLabel');
 const plantaSuites    = document.getElementById('plantaSuites');
 const sizesContainer  = document.querySelector('.plantas__sizes');
+const floorsContainer = document.getElementById('plantasFloors');
 
 function renderSizes(tipo) {
   if (!sizesContainer) return;
@@ -191,15 +196,48 @@ function renderSizes(tipo) {
   });
 }
 
+function updateFloorButtons(tipo) {
+  if (!floorsContainer) return;
+  const tipoData = plantasDB[tipo];
+  const hasFloors = tipoData?.hasFloors;
+  floorsContainer.style.display = hasFloors ? 'flex' : 'none';
+  if (hasFloors) {
+    activeFloor = 0;
+    const labels = tipoData.floorLabels || ['1º Andar', '2º Andar'];
+    const btns = floorsContainer.querySelectorAll('.plantas__floor-btn');
+    btns.forEach((btn, i) => {
+      btn.classList.toggle('active', i === 0);
+      btn.textContent = labels[i];
+    });
+  }
+}
+
 function updatePlanta() {
   const tipoData = plantasDB[activeTipo];
   if (!tipoData) return;
   const sizeData = tipoData.sizes.find(s => s.id === activeSizeId);
   if (!sizeData) return;
-  plantaAreaNum.textContent   = sizeData.area;
-  plantaTipoLabel.textContent = tipoData.label;
-  plantaSuites.textContent    = sizeData.suites;
-  plantaImg.src = `assets/images/plantas/${sizeData.img}`;
+  plantaAreaNum.textContent = sizeData.area;
+  plantaSuites.textContent  = sizeData.suites;
+  if (tipoData.hasFloors) {
+    const label = tipoData.floorLabels ? tipoData.floorLabels[activeFloor] : tipoData.label;
+    plantaTipoLabel.textContent = label;
+    plantaImg.src = `assets/images/plantas/${sizeData.floors[activeFloor]}`;
+  } else {
+    plantaTipoLabel.textContent = tipoData.label;
+    plantaImg.src = `assets/images/plantas/${sizeData.img}`;
+  }
+}
+
+if (floorsContainer) {
+  floorsContainer.querySelectorAll('.plantas__floor-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      floorsContainer.querySelectorAll('.plantas__floor-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeFloor = parseInt(btn.dataset.floor);
+      updatePlanta();
+    });
+  });
 }
 
 document.querySelectorAll('.plantas__tipo-btn').forEach(btn => {
@@ -209,9 +247,23 @@ document.querySelectorAll('.plantas__tipo-btn').forEach(btn => {
     activeTipo = btn.dataset.tipo;
     activeSizeId = plantasDB[activeTipo].sizes[0].id;
     renderSizes(activeTipo);
+    updateFloorButtons(activeTipo);
     updatePlanta();
   });
 });
 
 renderSizes(activeTipo);
+updateFloorButtons(activeTipo);
 updatePlanta();
+
+/* --- Plantas: expandir imagem no lightbox ------------------ */
+const plantaPlanWrap = document.querySelector('.plantas__plan-wrap');
+if (plantaPlanWrap) {
+  plantaPlanWrap.style.cursor = 'zoom-in';
+  plantaPlanWrap.addEventListener('click', () => {
+    lightboxImg.src = plantaImg.src;
+    lightboxImg.alt = plantaImg.alt;
+    lightbox.classList.add('open');
+    lightbox.setAttribute('aria-hidden', 'false');
+  });
+}

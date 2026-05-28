@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="assets/css/sections.css" />
 </head>
 <body>
+<div class="page-wrapper">
 
   <!-- =========================================================
        SEÇÃO 1 — NAVBAR + HERO
@@ -40,6 +41,11 @@
     <!-- Navbar -->
     <header class="navbar" id="navbar">
       <div class="navbar__container">
+
+        <!-- Logo mobile (só aparece no mobile) -->
+        <a href="#inicio" class="navbar__logo-mobile" aria-label="Areias do Sul">
+          <img src="assets/images/logo.svg" alt="Residencial Areias do Sul" />
+        </a>
 
         <nav class="navbar__nav" aria-label="Menu principal">
           <a href="#sobre"       class="navbar__link">Sobre</a>
@@ -97,13 +103,16 @@
     <div class="hero__stats-wrap">
       <div class="hero__stats-line"></div>
       <div class="hero__stats">
-        <span class="hero__stat">85,74m² a 164,08m²</span>
-        <span class="hero__sep" aria-hidden="true">/</span>
-        <span class="hero__stat">2 a 4 suítes</span>
-        <span class="hero__sep" aria-hidden="true">/</span>
-        <span class="hero__stat">Piscina climatizada</span>
-        <span class="hero__sep" aria-hidden="true">/</span>
-        <span class="hero__stat">1 vaga de garagem</span>
+        <div class="hero__stats-row">
+          <span class="hero__stat">85,74m² a 164,08m²</span>
+          <span class="hero__sep" aria-hidden="true">/</span>
+          <span class="hero__stat">2 a 4 suítes</span>
+        </div>
+        <div class="hero__stats-row">
+          <span class="hero__stat">Piscina climatizada</span>
+          <span class="hero__sep" aria-hidden="true">/</span>
+          <span class="hero__stat">1 vaga de garagem</span>
+        </div>
       </div>
       <div class="hero__scroll-btn" aria-label="Rolar para baixo">
         <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -477,6 +486,10 @@
           <span class="plantas__area-num" id="plantaAreaNum">142,39m²</span>
         </div>
         <p class="plantas__info-suites" id="plantaSuites">3 Suítes e 1 Vaga</p>
+        <div class="plantas__floors" id="plantasFloors">
+          <button class="plantas__floor-btn active" data-floor="0">1º Andar</button>
+          <button class="plantas__floor-btn" data-floor="1">2º Andar</button>
+        </div>
       </div>
 
       <div class="plantas__plan-wrap">
@@ -529,10 +542,11 @@
         </button>
       </div>
 
-      <!-- Título + Legenda com fundo navy -->
-      <div class="implantacao__legenda-band">
-      <h3 class="implantacao__title">Implantação</h3>
+    </div><!-- /.implantacao__container -->
 
+    <!-- Título + Legenda com fundo navy (full-width) -->
+    <div class="implantacao__legenda-band">
+      <h3 class="implantacao__title">Implantação</h3>
       <div class="implantacao__legenda">
         <div class="implantacao__legenda-item">
           <span class="implantacao__legenda-num">1</span>
@@ -563,9 +577,8 @@
           <span>- Minimarket</span>
         </div>
       </div>
-      </div><!-- /.implantacao__legenda-band -->
+    </div><!-- /.implantacao__legenda-band -->
 
-    </div>
   </section>
   <!-- FIM SEÇÃO 5 —IMPLANTAÇÃO -->
 
@@ -865,5 +878,6 @@
 
 
   <script src="assets/js/main.js"></script>
+</div><!-- /.page-wrapper -->
 </body>
 </html>
