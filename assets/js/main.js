@@ -31,28 +31,55 @@ mobileMenu.querySelectorAll('a').forEach(link => {
   });
 });
 
+/* --- Galeria: filtros -------------------------------------- */
+let activeFilter = 'apartamentos';
+
+function getVisibleSlides() {
+  return [...document.querySelectorAll('.galeria__slide')].filter(s =>
+    !s.dataset.filter || s.dataset.filter === activeFilter
+  );
+}
+
+function applyFilter(filter) {
+  activeFilter = filter;
+  currentSlide = 0;
+  document.querySelectorAll('.galeria__slide').forEach(s => {
+    s.style.display = (!s.dataset.filter || s.dataset.filter === filter) ? '' : 'none';
+  });
+  galeriaTrack.style.transform = 'translateY(0)';
+}
+
+document.querySelectorAll('.galeria__filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.galeria__filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    applyFilter(btn.dataset.filter);
+  });
+});
+
+applyFilter(activeFilter);
+
 /* --- Galeria: carrossel vertical --------------------------- */
 const galeriaTrack = document.getElementById('galeriaTrack');
-const galeriaSlides = document.querySelectorAll('.galeria__slide');
 const prevBtn    = document.getElementById('galeriaPrev');
 const nextBtn    = document.getElementById('galeriaNext');
 let currentSlide = 0;
 
 function getSlideStep() {
-  if (!galeriaSlides[0]) return 0;
-  const slideH = galeriaSlides[0].offsetHeight;
+  const visible = getVisibleSlides();
+  if (!visible[0]) return 0;
+  const slideH = visible[0].offsetHeight;
   const gap = parseInt(getComputedStyle(galeriaTrack).gap) || 24;
   return slideH + gap;
 }
 
 function moveGaleria(index) {
   if (!galeriaTrack) return;
-  currentSlide = Math.max(0, Math.min(index, galeriaSlides.length - 1));
+  const visible = getVisibleSlides();
+  currentSlide = Math.max(0, Math.min(index, visible.length - 1));
   const offset = getSlideStep() * currentSlide;
   galeriaTrack.style.transform = `translateY(-${offset}px)`;
 }
-
-const slides = galeriaSlides; // alias para lightbox
 
 if (prevBtn) prevBtn.addEventListener('click', () => moveGaleria(currentSlide - 1));
 if (nextBtn) nextBtn.addEventListener('click', () => moveGaleria(currentSlide + 1));
@@ -62,9 +89,9 @@ const lightbox      = document.getElementById('galeriaLightbox');
 const lightboxImg   = document.getElementById('galeriaLightboxImg');
 const lightboxClose = document.getElementById('galeriaLightboxClose');
 
-document.querySelectorAll('.galeria__expand').forEach((btn, i) => {
+document.querySelectorAll('.galeria__expand').forEach(btn => {
   btn.addEventListener('click', () => {
-    const img = slides[i].querySelector('img');
+    const img = btn.closest('.galeria__slide').querySelector('img');
     lightboxImg.src = img.src;
     lightboxImg.alt = img.alt;
     lightbox.classList.add('open');
