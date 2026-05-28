@@ -410,6 +410,8 @@
   align-items: center;
   gap: 0.75rem;
   margin-bottom: 1.25rem;
+  flex-wrap: nowrap;
+  white-space: nowrap;
 }
 .section-label__project {
   font-family: var(--font-body);
@@ -820,7 +822,8 @@
 }
 
 @media (max-width: 480px) {
-  .galeria__filters { gap: 0.5rem; }
+  .galeria__filters { gap: 0.5rem; flex-wrap: nowrap; }
+  .galeria__filter-label { display: none; }
   .galeria__filter-btn { padding: 0.625rem 1rem; font-size: 0.8125rem; }
 }
 
