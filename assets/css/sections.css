@@ -377,7 +377,7 @@
 .sobre__texture {
   position: absolute;
   inset: 0;
-  background-image: url('../images/sobre-bg.jpg');
+  background-image: url('../images/sobre-bg.avif');
   background-size: cover;
   background-position: center;
   opacity: 0.45;
@@ -834,7 +834,7 @@
   margin-top: clamp(-11rem, -15vw, -18rem);
   padding-top: clamp(7rem, 12vw, 14rem);
   padding-bottom: clamp(4rem, 6vw, 7rem);
-  background-image: url('../images/plantas/ocean-bg.jpg');
+  background-image: url('../images/plantas/ocean-bg.avif');
   background-size: cover;
   background-position: left center;
 }

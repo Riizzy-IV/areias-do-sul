@@ -9,7 +9,10 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Preload critical assets -->
+  <link rel="preload" href="assets/images/hero-bg.avif" as="image" fetchpriority="high" />
 
   <!-- Styles -->
   <link rel="stylesheet" href="assets/css/style.css" />
@@ -28,12 +31,12 @@
       <video
         class="hero__video"
         src="assets/video-hero.mp4"
-        poster="assets/images/hero-bg.jpg"
+        poster="assets/images/hero-bg.avif"
         autoplay
         muted
         loop
         playsinline
-        preload="auto"
+        preload="none"
         aria-hidden="true"
       ></video>
       <div class="hero__overlay"></div>
@@ -167,7 +170,7 @@
     <!-- Parte 2: Foto full-width da fachada com quote sobreposta -->
     <div class="sobre__photo-wrap">
       <img
-        src="assets/images/fachada.jpg"
+        src="assets/images/fachada.avif"
         alt="Fachada do Residencial Areias do Sul"
         class="sobre__photo"
         loading="lazy"
@@ -228,7 +231,7 @@
       <!-- Linha 2 esq: foto drone -->
       <div class="galeria__drone-wrap">
         <img
-          src="assets/images/galeria/drone.jpg"
+          src="assets/images/galeria/drone.avif"
           alt="Vista aérea do Residencial Areias do Sul"
           class="galeria__drone"
           loading="lazy"
@@ -244,7 +247,7 @@
           <div class="galeria__track" id="galeriaTrack">
 
             <div class="galeria__slide" data-filter="apartamentos">
-              <img src="assets/images/galeria/int-01.jpg" alt="Imagens Internas 01" loading="lazy" />
+              <img src="assets/images/galeria/int-01.avif" alt="Imagens Internas 01" loading="lazy" />
               <div class="galeria__slide-caption">APARTAMENTO - 01/09</div>
               <button class="galeria__expand" aria-label="Ampliar imagem">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -254,7 +257,7 @@
             </div>
 
             <div class="galeria__slide" data-filter="apartamentos">
-              <img src="assets/images/galeria/int-02.jpg" alt="Imagens Internas 02" loading="lazy" />
+              <img src="assets/images/galeria/int-02.avif" alt="Imagens Internas 02" loading="lazy" />
               <div class="galeria__slide-caption">APARTAMENTO - 02/09</div>
               <button class="galeria__expand" aria-label="Ampliar imagem">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -264,7 +267,7 @@
             </div>
 
             <div class="galeria__slide" data-filter="apartamentos">
-              <img src="assets/images/galeria/int-03.jpg" alt="Imagens Internas 03" loading="lazy" />
+              <img src="assets/images/galeria/int-03.avif" alt="Imagens Internas 03" loading="lazy" />
               <div class="galeria__slide-caption">APARTAMENTO - 03/09</div>
               <button class="galeria__expand" aria-label="Ampliar imagem">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -274,7 +277,7 @@
             </div>
 
             <div class="galeria__slide" data-filter="apartamentos">
-              <img src="assets/images/galeria/int-04.jpg" alt="Imagens Internas 04" loading="lazy" />
+              <img src="assets/images/galeria/int-04.avif" alt="Imagens Internas 04" loading="lazy" />
               <div class="galeria__slide-caption">APARTAMENTO - 04/09</div>
               <button class="galeria__expand" aria-label="Ampliar imagem">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -284,7 +287,7 @@
             </div>
 
             <div class="galeria__slide" data-filter="apartamentos">
-              <img src="assets/images/galeria/int-05.jpg" alt="Imagens Internas 05" loading="lazy" />
+              <img src="assets/images/galeria/int-05.avif" alt="Imagens Internas 05" loading="lazy" />
               <div class="galeria__slide-caption">APARTAMENTO - 05/09</div>
               <button class="galeria__expand" aria-label="Ampliar imagem">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -294,7 +297,7 @@
             </div>
 
             <div class="galeria__slide" data-filter="apartamentos">
-              <img src="assets/images/galeria/int-06.jpg" alt="Imagens Internas 06" loading="lazy" />
+              <img src="assets/images/galeria/int-06.avif" alt="Imagens Internas 06" loading="lazy" />
               <div class="galeria__slide-caption">APARTAMENTO - 06/09</div>
               <button class="galeria__expand" aria-label="Ampliar imagem">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -304,7 +307,7 @@
             </div>
 
             <div class="galeria__slide" data-filter="apartamentos">
-              <img src="assets/images/galeria/int-07.jpg" alt="Imagens Internas 07" loading="lazy" />
+              <img src="assets/images/galeria/int-07.avif" alt="Imagens Internas 07" loading="lazy" />
               <div class="galeria__slide-caption">APARTAMENTO - 07/09</div>
               <button class="galeria__expand" aria-label="Ampliar imagem">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -314,7 +317,7 @@
             </div>
 
             <div class="galeria__slide" data-filter="apartamentos">
-              <img src="assets/images/galeria/int-08.jpg" alt="Imagens Internas 08" loading="lazy" />
+              <img src="assets/images/galeria/int-08.avif" alt="Imagens Internas 08" loading="lazy" />
               <div class="galeria__slide-caption">APARTAMENTO - 08/09</div>
               <button class="galeria__expand" aria-label="Ampliar imagem">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -324,7 +327,7 @@
             </div>
 
             <div class="galeria__slide" data-filter="apartamentos">
-              <img src="assets/images/galeria/int-09.jpg" alt="Imagens Internas 09" loading="lazy" />
+              <img src="assets/images/galeria/int-09.avif" alt="Imagens Internas 09" loading="lazy" />
               <div class="galeria__slide-caption">APARTAMENTO - 09/09</div>
               <button class="galeria__expand" aria-label="Ampliar imagem">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -334,7 +337,7 @@
             </div>
 
             <div class="galeria__slide" data-filter="areas-comuns">
-              <img src="assets/images/galeria/ac-01.jpg" alt="Área Comum 01" loading="lazy" />
+              <img src="assets/images/galeria/ac-01.avif" alt="Área Comum 01" loading="lazy" />
               <div class="galeria__slide-caption">ÁREA COMUM - 01/08</div>
               <button class="galeria__expand" aria-label="Ampliar imagem">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -344,7 +347,7 @@
             </div>
 
             <div class="galeria__slide" data-filter="areas-comuns">
-              <img src="assets/images/galeria/ac-02.jpg" alt="Área Comum 02" loading="lazy" />
+              <img src="assets/images/galeria/ac-02.avif" alt="Área Comum 02" loading="lazy" />
               <div class="galeria__slide-caption">ÁREA COMUM - 02/08</div>
               <button class="galeria__expand" aria-label="Ampliar imagem">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -354,7 +357,7 @@
             </div>
 
             <div class="galeria__slide" data-filter="areas-comuns">
-              <img src="assets/images/galeria/ac-03.jpg" alt="Área Comum 03" loading="lazy" />
+              <img src="assets/images/galeria/ac-03.avif" alt="Área Comum 03" loading="lazy" />
               <div class="galeria__slide-caption">ÁREA COMUM - 03/08</div>
               <button class="galeria__expand" aria-label="Ampliar imagem">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -364,7 +367,7 @@
             </div>
 
             <div class="galeria__slide" data-filter="areas-comuns">
-              <img src="assets/images/galeria/ac-04.jpg" alt="Área Comum 04" loading="lazy" />
+              <img src="assets/images/galeria/ac-04.avif" alt="Área Comum 04" loading="lazy" />
               <div class="galeria__slide-caption">ÁREA COMUM - 04/08</div>
               <button class="galeria__expand" aria-label="Ampliar imagem">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -374,7 +377,7 @@
             </div>
 
             <div class="galeria__slide" data-filter="areas-comuns">
-              <img src="assets/images/galeria/ac-05.jpg" alt="Área Comum 05" loading="lazy" />
+              <img src="assets/images/galeria/ac-05.avif" alt="Área Comum 05" loading="lazy" />
               <div class="galeria__slide-caption">ÁREA COMUM - 05/08</div>
               <button class="galeria__expand" aria-label="Ampliar imagem">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -384,7 +387,7 @@
             </div>
 
             <div class="galeria__slide" data-filter="areas-comuns">
-              <img src="assets/images/galeria/ac-06.jpg" alt="Área Comum 06" loading="lazy" />
+              <img src="assets/images/galeria/ac-06.avif" alt="Área Comum 06" loading="lazy" />
               <div class="galeria__slide-caption">ÁREA COMUM - 06/08</div>
               <button class="galeria__expand" aria-label="Ampliar imagem">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -394,7 +397,7 @@
             </div>
 
             <div class="galeria__slide" data-filter="areas-comuns">
-              <img src="assets/images/galeria/ac-07.jpg" alt="Área Comum 07" loading="lazy" />
+              <img src="assets/images/galeria/ac-07.avif" alt="Área Comum 07" loading="lazy" />
               <div class="galeria__slide-caption">ÁREA COMUM - 07/08</div>
               <button class="galeria__expand" aria-label="Ampliar imagem">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -404,7 +407,7 @@
             </div>
 
             <div class="galeria__slide" data-filter="areas-comuns">
-              <img src="assets/images/galeria/ac-08.jpg" alt="Área Comum 08" loading="lazy" />
+              <img src="assets/images/galeria/ac-08.avif" alt="Área Comum 08" loading="lazy" />
               <div class="galeria__slide-caption">ÁREA COMUM - 08/08</div>
               <button class="galeria__expand" aria-label="Ampliar imagem">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -531,7 +534,7 @@
       <!-- Imagem -->
       <div class="implantacao__img-wrap">
         <img
-          src="assets/images/IMPLANTACAO.png"
+          src="assets/images/IMPLANTACAO.avif"
           alt="Planta de implantação"
           class="implantacao__img"
           loading="lazy"
@@ -832,7 +835,7 @@
         </div>
       </div>
 
-      <img src="assets/images/construtora-foto.jpg" alt="Hughes Construtora" class="construtora__photo" />
+      <img src="assets/images/construtora-foto.avif" alt="Hughes Construtora" class="construtora__photo" />
 
     </div>
   </section>
@@ -878,7 +881,7 @@
   <!-- FIM FOOTER -->
 
 
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js" defer></script>
 </div><!-- /.page-wrapper -->
 </body>
 </html>

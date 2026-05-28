@@ -117,7 +117,7 @@ const implantacaoWrap = implantacaoExpand?.closest('.implantacao__img-wrap');
 [implantacaoExpand, implantacaoWrap].forEach(el => {
   if (!el) return;
   el.addEventListener('click', () => {
-    lightboxImg.src = 'assets/images/IMPLANTACAO.png';
+    lightboxImg.src = 'assets/images/IMPLANTACAO.avif';
     lightboxImg.alt = 'Planta de implantação';
     lightbox.classList.add('open');
     lightbox.setAttribute('aria-hidden', 'false');
@@ -142,18 +142,18 @@ const plantasDB = {
     label: 'Térreo',
     hasFloors: true,
     sizes: [
-      { id: '143',  area: '143,25m²', suites: '3 Suítes e 1 Vaga', floors: ['garden/143,25.png',  'garden/garden-01-06.jpg'] },
-      { id: '142',  area: '142,39m²', suites: '3 Suítes e 1 Vaga', floors: ['garden/142,39.png',  'garden/garden-02-05.jpg'] },
-      { id: '107a', area: '107,52m²', suites: '2 Suítes e 1 Vaga', floors: ['garden/107,52.png',  'garden/garden-03-04.jpg'] },
-      { id: '107b', area: '107,32m²', suites: '2 Suítes e 1 Vaga', floors: ['garden/107,32.png',  'garden/garden-03-04.jpg'] },
+      { id: '143',  area: '143,25m²', suites: '3 Suítes e 1 Vaga', floors: ['garden/143,25.avif',  'garden/garden-01-06.avif'] },
+      { id: '142',  area: '142,39m²', suites: '3 Suítes e 1 Vaga', floors: ['garden/142,39.avif',  'garden/garden-02-05.avif'] },
+      { id: '107a', area: '107,52m²', suites: '2 Suítes e 1 Vaga', floors: ['garden/107,52.avif',  'garden/garden-03-04.avif'] },
+      { id: '107b', area: '107,32m²', suites: '2 Suítes e 1 Vaga', floors: ['garden/107,32.avif',  'garden/garden-03-04.avif'] },
     ],
   },
   tipo: {
     label: '1º Pavimento',
     sizes: [
-      { id: '106', area: '106,48m²', suites: '3 Suítes e 1 Vaga', img: 'tipo/106,48.png' },
-      { id: '97',  area: '97,99m²',  suites: '3 Suítes e 1 Vaga', img: 'tipo/97,99.png' },
-      { id: '85',  area: '85,74m²',  suites: '2 Suítes e 1 Vaga', img: 'tipo/85,74.png' },
+      { id: '106', area: '106,48m²', suites: '3 Suítes e 1 Vaga', img: 'tipo/106,48.avif' },
+      { id: '97',  area: '97,99m²',  suites: '3 Suítes e 1 Vaga', img: 'tipo/97,99.avif' },
+      { id: '85',  area: '85,74m²',  suites: '2 Suítes e 1 Vaga', img: 'tipo/85,74.avif' },
     ],
   },
   cobertura: {
@@ -161,10 +161,10 @@ const plantasDB = {
     hasFloors: true,
     floorLabels: ['1º Andar', '2º Andar'],
     sizes: [
-      { id: '134', area: '134,80m²', suites: '3 Suítes e 1 Vaga', floors: ['cobertura/134,80.png',  'cobertura/134,80 2 andar.png'] },
-      { id: '136', area: '136,71m²', suites: '3 Suítes e 1 Vaga', floors: ['cobertura/136,71.png',  'cobertura/136,71 2 andar.png'] },
-      { id: '91',  area: '91,71m²',  suites: '2 Suítes e 1 Vaga', floors: ['cobertura/91,71.png',   'cobertura/91,71 2 andar.png'] },
-      { id: '90',  area: '90,77m²',  suites: '2 Suítes e 1 Vaga', floors: ['cobertura/90,77.png',   'cobertura/90,77 2 andar.png'] },
+      { id: '134', area: '134,80m²', suites: '3 Suítes e 1 Vaga', floors: ['cobertura/134,80.avif',  'cobertura/134,80 2 andar.avif'] },
+      { id: '136', area: '136,71m²', suites: '3 Suítes e 1 Vaga', floors: ['cobertura/136,71.avif',  'cobertura/136,71 2 andar.avif'] },
+      { id: '91',  area: '91,71m²',  suites: '2 Suítes e 1 Vaga', floors: ['cobertura/91,71.avif',   'cobertura/91,71 2 andar.avif'] },
+      { id: '90',  area: '90,77m²',  suites: '2 Suítes e 1 Vaga', floors: ['cobertura/90,77.avif',   'cobertura/90,77 2 andar.avif'] },
     ],
   },
 };
